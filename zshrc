@@ -179,8 +179,13 @@ export EDITOR=code
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" && RPROMPT+='[🐍 $(pyenv_prompt_info)]'
 
+# Olist module for module 4 of data science challenges
+export PYTHONPATH="/Users/lorenzodc/code/ldeld/data-challenges/04-Decision-Science:$PYTHONPATH"
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# TODO: fix this (temporary for a lecture)
+alias heroku="/opt/homebrew/bin/heroku"
