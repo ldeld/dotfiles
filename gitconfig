@@ -1,0 +1,26 @@
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+  ui = auto
+
+[color "branch"]
+  current = green
+  remote = yellow
+
+[core]
+  pager = less -FRSX
+  editor = code --wait
+
+
+[branch "master"]
+  mergeoptions = --no-edit
+
+
+[branch "main"]
+  mergeoptions = --no-edit
+
+[user]
+	name = Lorenzo Del Castillo
+	email = l.delcastillo.97@gmail.com
