@@ -175,6 +175,9 @@ export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR=code
 export EDITOR=code
 
+# Add new HomeBrew installation path (see https://github.com/Homebrew/discussions/discussions/417)
+export PATH="/opt/homebrew/bin:$PATH"
+
 # Load pyenv (to manage your Python versions)
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" && RPROMPT+='[🐍 $(pyenv_prompt_info)]'
@@ -186,6 +189,3 @@ export PYTHONPATH="/Users/lorenzodc/code/ldeld/data-challenges/04-Decision-Scien
 export PYTHONBREAKPOINT=ipdb.set_trace
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-
-# TODO: fix this (temporary for a lecture)
-alias heroku="/opt/homebrew/bin/heroku"
