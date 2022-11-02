@@ -175,8 +175,6 @@ export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR=code
 export EDITOR=code
 
-# Add new HomeBrew installation path (see https://github.com/Homebrew/discussions/discussions/417)
-export PATH="/opt/homebrew/bin:$PATH"
 
 # Load pyenv (to manage your Python versions)
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
@@ -184,6 +182,25 @@ type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-
 
 # Olist module for module 4 of data science challenges
 export PYTHONPATH="$HOME/code/ldeld/data-challenges/04-Decision-Science:$PYTHONPATH"
+
+
+_ARCH=$(arch)
+if [[ "$_ARCH" == "i386" ]]; then
+  export PATH="/usr/local/bin:$PATH"
+  export PATH="/usr/local/opt:$PATH"
+fi
+
+if [[ "$_ARCH" == "arm64" ]]; then
+  #usr/local is X_86
+  export PATH="/opt/homebrew/bin:$PATH"
+  export PATH="/opt/homebrew/opt:$PATH"
+  export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+fi
+
+# Keep old brew for Rosetta and old ruby installations
+
+alias oldbrew="arch -x86_64  /usr/local/bin/brew"
+alias oldrvm="arch -x86_64 rvm"
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
