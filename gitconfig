@@ -24,3 +24,5 @@
 [user]
 	name = Lorenzo Del Castillo
 	email = l.delcastillo.97@gmail.com
+[alias]
+	alias = config --get-regexp ^alias\\.
