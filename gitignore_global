@@ -7,3 +7,5 @@
 .env
 
 node_modules/
+
+.rake_tasks
