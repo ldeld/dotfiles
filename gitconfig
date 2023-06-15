@@ -12,6 +12,7 @@
 [core]
   pager = less -FRSX
   editor = code --wait
+	excludesfile = ~/.gitignore_global
 
 
 [branch "master"]
