@@ -62,7 +62,7 @@ SPACESHIP_PROMPT_ORDER=(
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="false"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -82,7 +82,7 @@ SPACESHIP_PROMPT_ORDER=(
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git gitfast rails zsh-syntax-highlighting pyenv
+  git gitfast rails rake-fast pyenv  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
