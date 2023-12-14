@@ -1,5 +1,0 @@
-alias lt_rails="lt --port 3000 --subdomain lorenzodc1997"
-
-alias edit_zsh="code ~/.zshrc"
-
-alias ghpr="gh pr create -B staging -a @me"

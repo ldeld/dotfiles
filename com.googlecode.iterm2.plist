@@ -2707,12 +2707,16 @@
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.19607843137254902</real>
+				<real>0.14901960784313725</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>0.14901960784313725</real>
 				<key>Red Component</key>
-				<real>0.54117647058823526</real>
+				<real>1</real>
 			</dict>
 			<key>Ansi 10 Color</key>
 			<dict>
@@ -2774,12 +2778,16 @@
 			</dict>
 			<key>Ansi 2 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.062745098039215685</real>
+				<real>0.11372549019607843</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.60392156862745094</real>
+				<real>0.78823529411764703</real>
 				<key>Red Component</key>
-				<real>0.37647058823529411</real>
+				<real>0.54509803921568623</real>
 			</dict>
 			<key>Ansi 3 Color</key>
 			<dict>
@@ -3337,6 +3345,8 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
+			<true/>
+			<key>Use Tab Color</key>
 			<true/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
@@ -4043,12 +4053,16 @@
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.19607843137254902</real>
+				<real>0.1512603759765625</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>0.1512603759765625</real>
 				<key>Red Component</key>
-				<real>0.54117647058823526</real>
+				<real>1</real>
 			</dict>
 			<key>Ansi 10 Color</key>
 			<dict>
@@ -4110,12 +4124,16 @@
 			</dict>
 			<key>Ansi 2 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.062745098039215685</real>
+				<real>0.11372549019607843</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.60392156862745094</real>
+				<real>0.78823529411764703</real>
 				<key>Red Component</key>
-				<real>0.37647058823529411</real>
+				<real>0.54509803921568623</real>
 			</dict>
 			<key>Ansi 3 Color</key>
 			<dict>
@@ -4217,7 +4235,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>2</real>
+			<real>4</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -4702,7 +4720,7 @@
 			<key>Thin Strokes</key>
 			<integer>3</integer>
 			<key>Transparency</key>
-			<real>0.051487699468085103</real>
+			<real>0.029999999999999999</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -4775,7 +4793,7 @@
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>SmartPlacement</key>
 	<false/>
 	<key>Snippets</key>
@@ -4794,7 +4812,7 @@
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.35330528846153852</real>
+	<real>0.34816254550970871</real>
 	<key>StretchTabsToFillBar</key>
 	<true/>
 	<key>TabStyle</key>
