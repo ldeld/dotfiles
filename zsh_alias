@@ -1,0 +1,25 @@
+#!/bin/sh
+alias al='code ~/.zsh_alias'
+alias myzsh='code ~/.zshrc'
+
+alias ghpr="gh pr create -B staging -a @me"
+alias git='LANG=en_US git'
+
+alias rc='rails console'
+alias rjw='rails jobs:work'
+alias lt_rails="lt --port 3000 --subdomain lorenzodc1997"
+alias krs="kill -9 $(lsof -wni tcp:3000 | grep ruby | awk '{print $2; exit}')"
+
+alias hk='heroku'
+alias hkl='heroku logs'
+alias hkr='heroku run'
+alias hkrestart='heroku restart'
+alias push_hkprod='git push heroku-prod master:master'
+alias push_hkdev='git push heroku-dev'
+
+alias pm="python -m"
+alias dj="python manage.py"
+alias djs="python manage.py runserver"
+alias djm="python manage.py migrate"
+
+alias nginx="sudo lsof -ti:80 | sudo xargs kill -9 && sudo nginx"

@@ -23,7 +23,6 @@ SPACESHIP_PROMPT_ORDER=(
   host
   git
   ruby
-  pyenv
   exec_time
   line_sep
   time
@@ -82,7 +81,7 @@ COMPLETION_WAITING_DOTS="false"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git gitfast rails rake-fast pyenv  zsh-syntax-highlighting
+  git gitfast rails rake-fast  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -166,7 +165,7 @@ type -a nvm > /dev/null && load-nvmrc
 export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 
 # Store your own aliases in the ~/.aliases file and load the here.
-[[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
+[[ -f "$HOME/.zsh_alias" ]] && source "$HOME/.zsh_alias"
 
 # Encoding stuff for the terminal
 export LANG=en_US.UTF-8
@@ -175,13 +174,6 @@ export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR=code
 export EDITOR=code
 
-
-# Load pyenv (to manage your Python versions)
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" && RPROMPT+='[🐍 $(pyenv_prompt_info)]'
-
-# Olist module for module 4 of data science challenges
-export PYTHONPATH="$HOME/code/ldeld/data-challenges/04-Decision-Science:$PYTHONPATH"
 
 
 _ARCH=$(arch)
