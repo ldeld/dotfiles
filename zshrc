@@ -164,7 +164,7 @@ type -a nvm > /dev/null && load-nvmrc
 # Same for `./node_modules/.bin` and nodejs
 export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 
-# Store your own aliases in the ~/.aliases file and load the here.
+# Store your own aliases in the ~/.zsh_alias file and load the here.
 [[ -f "$HOME/.zsh_alias" ]] && source "$HOME/.zsh_alias"
 
 # Encoding stuff for the terminal
@@ -198,3 +198,21 @@ alias oldrvm="arch -x86_64 rvm"
 export PYTHONBREAKPOINT=ipdb.set_trace
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/lorenzodc/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/lorenzodc/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/lorenzodc/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/lorenzodc/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
