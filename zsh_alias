@@ -3,7 +3,7 @@ alias al='code ~/.zsh_alias'
 alias myzsh='code ~/.zshrc'
 alias reloadzsh='source ~/.zshrc'
 
-alias ghpr="gh pr create -B staging -a @me"
+alias ghpr="gh pr create -a @me"
 alias git='LANG=en_US git'
 
 alias rc='rails console'
@@ -28,9 +28,5 @@ alias nginx="sudo lsof -ti:80 | sudo xargs kill -9 && sudo nginx"
 
 # Amphora specific
 alias hermes="cd $HOME/code/Amphora/hermes && conda activate amphora"
-alias go="cd $HOME/code/Amphora/go && conda activate base"
-alias neptune="cd $HOME/code/Amphora/neptune && conda activate base"
-
-# Amphora local ENV
-export LOCAL_SSL_PATH="$HOME/code/Amphora/certificates/localamphora"
-export LOCAL_HOST="localamphora.com"
+alias go="cd $HOME/code/Amphora/go && conda activate base && nvm use"
+alias neptune="cd $HOME/code/Amphora/neptune && conda activate base && nvm use"
