@@ -15,7 +15,7 @@ notify() {
 ZSH_THEME="spaceship"
 # Spaceship theme configuration
 # See (https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/Options.md)
-SPACESHIP_NODE_SHOW=false
+SPACESHIP_NODE_SHOW=true
 SPACESHIP_TIME_SHOW=true
 SPACESHIP_PROMPT_ORDER=(
   user
@@ -23,6 +23,8 @@ SPACESHIP_PROMPT_ORDER=(
   host
   git
   ruby
+  node
+  conda
   exec_time
   line_sep
   time
