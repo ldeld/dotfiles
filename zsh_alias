@@ -3,7 +3,7 @@ alias al='code ~/.zsh_alias'
 alias myzsh='code ~/.zshrc'
 alias reloadzsh='source ~/.zshrc'
 
-alias ghpr="gh pr create -a @me"
+alias ghpr="gh pr create"
 alias git='LANG=en_US git'
 
 alias rc='rails console'
@@ -25,8 +25,9 @@ alias djm="python manage.py migrate"
 
 alias nginx="sudo lsof -ti:80 | sudo xargs kill -9 && sudo nginx"
 
+alias editaws="code ~/.aws/credentials"
 
 # Amphora specific
-alias hermes="cd $HOME/code/Amphora/hermes && conda activate amphora"
+alias hermes="cd $HOME/code/Amphora/hermes && conda activate amphora && export AWS_PROFILE=amphora"
 alias go="cd $HOME/code/Amphora/go && conda activate base && nvm use"
 alias neptune="cd $HOME/code/Amphora/neptune && conda activate base && nvm use"
