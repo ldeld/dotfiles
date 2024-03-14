@@ -1,1 +1,84 @@
-/Users/lorenzodc/.vscode/settings.json
+{
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 4,
+  "editor.formatOnPaste": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "emmet.includeLanguages": {
+    "erb": "html",
+    "ruby": "html",
+    "html": "html"
+  },
+  "html.format.templating": true,
+  "emmet.triggerExpansionOnTab": true,
+  "editor.accessibilitySupport": "off",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.fontWeight": "300",
+  "emmet.excludeLanguages": ["markdown", "python"],
+  "workbench.startupEditor": "none",
+  "workbench.tree.indent": 10,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.colorCustomizations": {
+    "tree.indentGuidesStroke": "#496881"
+  },
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true,
+    "[GitHub Dark]": {
+      "rules": {
+        "class": "#6ec4a9",
+        "module": "#38b3ff"
+      }
+    }
+  },
+  "editor.inlineSuggest.enabled": true,
+  "ruby.useLanguageServer": true,
+  "ruby.intellisense": "rubyLocate",
+  "python.analysis.typeCheckingMode": "basic",
+  "editor.formatOnSave": false,
+  "editor.minimap.enabled": false,
+  "editor.emptySelectionClipboard": false,
+  "files.trimTrailingWhitespace": true,
+  "gitlens.codeLens.enabled": false,
+  "editor.foldingStrategy": "indentation",
+  "search.exclude": {
+    "**/node_modules": true
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "yaml": false,
+    "erb": false
+  },
+  "editor.snippetSuggestions": "top",
+  "files.associations": {
+    "*.jb": "ruby"
+  },
+  "[ruby]": {
+    // "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "editor.rulers": [120],
+    "editor.semanticHighlighting.enabled": true
+  },
+  "window.zoomLevel": 2,
+  "terminal.integrated.fontWeightBold": "430",
+  "terminal.integrated.fontSize": 11,
+  "terminal.integrated.localEchoStyle": "dim",
+  "workbench.iconTheme": "icons",
+  "workbench.colorTheme": "GitHub Dark",
+  "[python]": {
+    "editor.detectIndentation": true
+  },
+  "search.followSymlinks": false,
+  "python.analysis.useLibraryCodeForTypes": false,
+  "[vue]": {
+    "editor.defaultFormatter": null,
+    "editor.tabSize": 2
+  }
+}
