@@ -83,7 +83,7 @@ COMPLETION_WAITING_DOTS="false"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git gitfast rails rake-fast  zsh-syntax-highlighting conda
+  git gitfast zsh-syntax-highlighting conda
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -196,9 +196,6 @@ fi
 alias oldbrew="arch -x86_64  /usr/local/bin/brew"
 alias oldrvm="arch -x86_64 rvm"
 
-# Set ipdb as the default Python debugger
-export PYTHONBREAKPOINT=ipdb.set_trace
-
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
@@ -223,3 +220,8 @@ export LOCAL_HOST="localamphora.com"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+eval $(thefuck --alias)
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+

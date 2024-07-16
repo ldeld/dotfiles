@@ -27,3 +27,9 @@
 	email = l.delcastillo.97@gmail.com
 [alias]
 	alias = config --get-regexp ^alias\\.
+	praise = blame
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

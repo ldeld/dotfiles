@@ -2576,19 +2576,29 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0xf700-0x300000</key>
+		<key>0xf700-0x300000-0x0</key>
 		<dict>
 			<key>Action</key>
-			<integer>7</integer>
-			<key>Text</key>
+			<integer>25</integer>
+			<key>Label</key>
 			<string></string>
+			<key>Text</key>
+			<string>Previous Mark
+Marks and Annotations.Previous Mark</string>
+			<key>Version</key>
+			<integer>0</integer>
 		</dict>
-		<key>0xf701-0x300000</key>
+		<key>0xf701-0x300000-0x0</key>
 		<dict>
 			<key>Action</key>
-			<integer>6</integer>
-			<key>Text</key>
+			<integer>25</integer>
+			<key>Label</key>
 			<string></string>
+			<key>Text</key>
+			<string>Next Mark
+Marks and Annotations.Next Mark</string>
+			<key>Version</key>
+			<integer>0</integer>
 		</dict>
 		<key>0xf702-0x2a0000</key>
 		<dict>
@@ -4678,7 +4688,7 @@
 			<key>Rows</key>
 			<integer>25</integer>
 			<key>Screen</key>
-			<integer>-1</integer>
+			<integer>0</integer>
 			<key>Scrollback Lines</key>
 			<integer>0</integer>
 			<key>Scrollback With Status Bar</key>

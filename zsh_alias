@@ -11,12 +11,6 @@ alias rjw='rails jobs:work'
 alias lt_rails="lt --port 3000 --subdomain lorenzodc1997"
 alias krs="kill -9 $(lsof -wni tcp:3000 | grep ruby | awk '{print $2; exit}')"
 
-alias hk='heroku'
-alias hkl='heroku logs'
-alias hkr='heroku run'
-alias hkrestart='heroku restart'
-alias push_hkprod='git push heroku-prod master:master'
-alias push_hkdev='git push heroku-dev'
 
 alias pm="python -m"
 alias dj="python manage.py"
@@ -28,6 +22,10 @@ alias nginx="sudo lsof -ti:80 | sudo xargs kill -9 && sudo nginx"
 alias editaws="code ~/.aws/credentials"
 
 # Amphora specific
-alias hermes="cd $HOME/code/Amphora/hermes && conda activate amphora && export AWS_PROFILE=amphora"
+alias hermes="cd $HOME/code/Amphora/hermes && conda activate amphora"
 alias go="cd $HOME/code/Amphora/go && conda activate base && nvm use"
 alias neptune="cd $HOME/code/Amphora/neptune && conda activate base && nvm use"
+
+# Git
+alias glm="git pull origin master"
+alias gsweep="git branch --merged master | egrep -v '^\s*\*?\s*master$' | xargs git branch -d"
