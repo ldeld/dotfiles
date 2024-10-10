@@ -3,15 +3,20 @@ alias al='code ~/.zsh_alias'
 alias myzsh='code ~/.zshrc'
 alias reloadzsh='source ~/.zshrc'
 
-alias ghpr="gh pr create"
+# git
 alias git='LANG=en_US git'
+alias grt='git restore'
+alias grts='git restore --staged'
+alias ghpr="gh pr create"
 
+
+# rails
 alias rc='rails console'
 alias rjw='rails jobs:work'
 alias lt_rails="lt --port 3000 --subdomain lorenzodc1997"
 alias krs="kill -9 $(lsof -wni tcp:3000 | grep ruby | awk '{print $2; exit}')"
 
-
+# python
 alias pm="python -m"
 alias dj="python manage.py"
 alias djs="python manage.py runserver"
@@ -22,7 +27,7 @@ alias nginx="sudo lsof -ti:80 | sudo xargs kill -9 && sudo nginx"
 alias editaws="code ~/.aws/credentials"
 
 # Amphora specific
-alias hermes="cd $HOME/code/Amphora/hermes && conda activate amphora"
+alias hermes="cd $HOME/code/Amphora/hermes && conda activate amphora311"
 alias go="cd $HOME/code/Amphora/go && conda activate base && nvm use"
 alias neptune="cd $HOME/code/Amphora/neptune && conda activate base && nvm use"
 

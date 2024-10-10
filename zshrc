@@ -7,12 +7,12 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="spaceship"
 
 notify() {
   osascript -e "display notification \"$1\" with title \"Terminal\""
 }
 
-ZSH_THEME="spaceship"
 # Spaceship theme configuration
 # See (https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/Options.md)
 SPACESHIP_NODE_SHOW=true
