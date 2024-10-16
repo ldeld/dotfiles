@@ -7,8 +7,8 @@ alias reloadzsh='source ~/.zshrc'
 alias git='LANG=en_US git'
 alias grt='git restore'
 alias grts='git restore --staged'
+alias gwip='() { git add . && git commit  --no-verify -m "WIP - DO NOT PUSH: $1" }'
 alias ghpr="gh pr create"
-
 
 # rails
 alias rc='rails console'
