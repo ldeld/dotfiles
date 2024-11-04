@@ -3343,7 +3343,22 @@ Marks and Annotations.Next Mark</string>
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Triggers</key>
-			<array/>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>AlertTrigger</string>
+					<key>parameter</key>
+					<string>Service deployed</string>
+					<key>regex</key>
+					<string>Service deployed to stack</string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>BounceTrigger</string>
+					<key>regex</key>
+					<string>hermes</string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
@@ -4835,8 +4850,7 @@ Marks and Annotations.Next Mark</string>
 	<real>604800</real>
 	<key>ToolbeltTools</key>
 	<array>
-		<string>Paste History</string>
-		<string>Snippets</string>
+		<string>Captured Output</string>
 	</array>
 	<key>URLHandlersByGuid</key>
 	<dict/>

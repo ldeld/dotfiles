@@ -83,7 +83,7 @@ COMPLETION_WAITING_DOTS="false"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git gitfast zsh-syntax-highlighting conda
+  git gitfast zsh-syntax-highlighting conda autoupdate
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -225,3 +225,11 @@ eval $(thefuck --alias)
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
+
+# pnpm
+export PNPM_HOME="/Users/lorenzodc/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
