@@ -3352,12 +3352,6 @@ Marks and Annotations.Next Mark</string>
 					<key>regex</key>
 					<string>Service deployed to stack</string>
 				</dict>
-				<dict>
-					<key>action</key>
-					<string>BounceTrigger</string>
-					<key>regex</key>
-					<string>hermes</string>
-				</dict>
 			</array>
 			<key>Unlimited Scrollback</key>
 			<true/>

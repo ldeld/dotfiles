@@ -218,11 +218,6 @@ unset __conda_setup
 export LOCAL_SSL_PATH="$HOME/code/Amphora/certificates/localhostAppKiwi"
 export LOCAL_HOST="localamphora.com"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-eval $(thefuck --alias)
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
 
@@ -233,3 +228,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

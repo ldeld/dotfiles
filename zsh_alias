@@ -7,7 +7,8 @@ alias reloadzsh='source ~/.zshrc'
 alias git='LANG=en_US git'
 alias grt='git restore'
 alias grts='git restore --staged'
-alias gwip='() { git add . && git commit  --no-verify -m "WIP - DO NOT PUSH: $1" }'
+alias gwip='() { git commit  --no-verify -m "WIP - DO NOT PUSH: $1" }'
+alias gwipa='() { git add . && gwip $1}'
 alias glm="git pull origin master"
 alias gsweep="git branch --merged master | egrep -v '^\s*\*?\s*master$' | xargs git branch -d"
 alias ghpr="gh pr create"
@@ -26,7 +27,11 @@ alias djm="python manage.py migrate"
 
 alias nginx="sudo lsof -ti:80 | sudo xargs kill -9 && sudo nginx"
 
+# aws
 alias editaws="code ~/.aws/credentials"
+
+# misc
+alias brewski="brew update && brew upgrade && brew cleanup; brew doctor"
 
 # Amphora specific
 alias hermes="cd $HOME/code/Amphora/hermes && conda activate amphora311"
