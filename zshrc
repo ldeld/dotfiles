@@ -132,6 +132,45 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 # ---- End slow pasting fix ---------------
 
 
+# Rails and Ruby uses the local `bin` folder to store binstubs.
+# So instead of running `bin/rails` like the doc says, just run `rails`
+# Same for `./node_modules/.bin` and nodejs
+# export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
+
+# Store your own aliases in the ~/.zsh_alias file and load the here.
+[[ -f "$HOME/.zsh_alias" ]] && source "$HOME/.zsh_alias"
+
+# Encoding stuff for the terminal
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+export BUNDLER_EDITOR=code
+export EDITOR=code
+
+_ARCH=$(arch)
+if [[ "$_ARCH" == "i386" ]]; then
+  export PATH="/usr/local/bin:$PATH"
+  export PATH="/usr/local/opt:$PATH"
+fi
+
+if [[ "$_ARCH" == "arm64" ]]; then
+  #usr/local is X_86
+  export PATH="/opt/homebrew/bin:$PATH"
+  export PATH="/opt/homebrew/opt:$PATH"
+  export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+fi
+
+# Keep old brew for Rosetta and old ruby installations
+
+alias oldbrew="arch -x86_64  /usr/local/bin/brew"
+alias oldrvm="arch -x86_64 rvm"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+
+# Add near the top of your PATH modifications
+export PATH="./node_modules/.bin:$PATH"
 
 # Load nvm (to manage your node versions)
 export NVM_DIR="$HOME/.nvm"
@@ -161,43 +200,22 @@ load-nvmrc() {
 type -a nvm > /dev/null && add-zsh-hook chpwd load-nvmrc
 type -a nvm > /dev/null && load-nvmrc
 
-# Rails and Ruby uses the local `bin` folder to store binstubs.
-# So instead of running `bin/rails` like the doc says, just run `rails`
-# Same for `./node_modules/.bin` and nodejs
-export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
-
-# Store your own aliases in the ~/.zsh_alias file and load the here.
-[[ -f "$HOME/.zsh_alias" ]] && source "$HOME/.zsh_alias"
-
-# Encoding stuff for the terminal
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-
-export BUNDLER_EDITOR=code
-export EDITOR=code
 
 
+# Amphora local ENV
+export LOCAL_HOST="localamphora.com"
 
-_ARCH=$(arch)
-if [[ "$_ARCH" == "i386" ]]; then
-  export PATH="/usr/local/bin:$PATH"
-  export PATH="/usr/local/opt:$PATH"
-fi
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
-if [[ "$_ARCH" == "arm64" ]]; then
-  #usr/local is X_86
-  export PATH="/opt/homebrew/bin:$PATH"
-  export PATH="/opt/homebrew/opt:$PATH"
-  export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-fi
 
-# Keep old brew for Rosetta and old ruby installations
+# pnpm
+export PNPM_HOME="/Users/lorenzodc/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 
-alias oldbrew="arch -x86_64  /usr/local/bin/brew"
-alias oldrvm="arch -x86_64 rvm"
-
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -213,21 +231,10 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+# Ensure conda python takes priority over brew
 
-# Amphora local ENV
-export LOCAL_SSL_PATH="$HOME/code/Amphora/certificates/localhostAppKiwi"
-export LOCAL_HOST="localamphora.com"
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+# Added by `rbenv init` on Wed Jul  9 17:58:43 CEST 2025
+eval "$(rbenv init - --no-rehash zsh)"
 
 
-# pnpm
-export PNPM_HOME="/Users/lorenzodc/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+export LOCAL_SSL_PATH="/Users/lorenzodc/.certs/localhostAppKiwi"

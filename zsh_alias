@@ -11,6 +11,7 @@ alias gwip='() { git commit  --no-verify -m "WIP - DO NOT PUSH: $1" }'
 alias gwipa='() { git add . && gwip $1}'
 alias glm="git pull origin master"
 alias gsweep="git branch --merged master | egrep -v '^\s*\*?\s*master$' | xargs git branch -d"
+alias gstack='() { git reflog | grep "checkout:" | cut -d " " -f 8 | uniq | head ${1} | cat -n }'
 alias ghpr="gh pr create"
 
 # rails
