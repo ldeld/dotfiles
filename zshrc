@@ -83,7 +83,7 @@ COMPLETION_WAITING_DOTS="false"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git gitfast zsh-syntax-highlighting conda autoupdate
+  git gitfast conda
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -160,11 +160,6 @@ if [[ "$_ARCH" == "arm64" ]]; then
   export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 fi
 
-# Keep old brew for Rosetta and old ruby installations
-
-alias oldbrew="arch -x86_64  /usr/local/bin/brew"
-alias oldrvm="arch -x86_64 rvm"
-
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
@@ -208,25 +203,25 @@ export LOCAL_HOST="localamphora.com"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
 
-# pnpm
-export PNPM_HOME="/Users/lorenzodc/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+# # pnpm
+# export PNPM_HOME="/Users/lorenzodc/Library/pnpm"
+# case ":$PATH:" in
+#   *":$PNPM_HOME:"*) ;;
+#   *) export PATH="$PNPM_HOME:$PATH" ;;
+# esac
+# # pnpm end
 
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/lorenzodc/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/lorenzodc/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/lorenzodc/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/lorenzodc/miniconda3/bin:$PATH"
+        export PATH="$HOME/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -234,7 +229,12 @@ unset __conda_setup
 # Ensure conda python takes priority over brew
 
 # Added by `rbenv init` on Wed Jul  9 17:58:43 CEST 2025
-eval "$(rbenv init - --no-rehash zsh)"
+# eval "$(rbenv init - --no-rehash zsh)"
 
 
-export LOCAL_SSL_PATH="/Users/lorenzodc/.certs/localhostAppKiwi"
+export LOCAL_SSL_PATH="$HOME/.certs/localhostAmphora"
+
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Hermes CLI autocompletion
+source "$HOME/code/Amphora/hermes/build/dev/completions/hermes-completion.bash"
