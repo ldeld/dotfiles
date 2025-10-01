@@ -238,3 +238,10 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Hermes CLI autocompletion
 source "$HOME/code/Amphora/hermes/build/dev/completions/hermes-completion.bash"
+
+# Add ~/.local/bin to PATH
+if [ -d "${HOME}/.local/bin" ] && [[ ":${PATH}:" != *":${HOME}/.local/bin:"* ]]; then
+    PATH="${HOME}/.local/bin:${PATH}"
+fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
