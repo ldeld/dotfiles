@@ -83,7 +83,7 @@ COMPLETION_WAITING_DOTS="false"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git gitfast conda
+  git gitfast conda ruby rails
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -196,20 +196,7 @@ type -a nvm > /dev/null && add-zsh-hook chpwd load-nvmrc
 type -a nvm > /dev/null && load-nvmrc
 
 
-
-# Amphora local ENV
-export LOCAL_HOST="localamphora.com"
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
-
-
-# # pnpm
-# export PNPM_HOME="/Users/lorenzodc/Library/pnpm"
-# case ":$PATH:" in
-#   *":$PNPM_HOME:"*) ;;
-#   *) export PATH="$PNPM_HOME:$PATH" ;;
-# esac
-# # pnpm end
 
 
 # >>> conda initialize >>>
@@ -226,18 +213,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-# Ensure conda python takes priority over brew
-
-# Added by `rbenv init` on Wed Jul  9 17:58:43 CEST 2025
-# eval "$(rbenv init - --no-rehash zsh)"
-
-
-export LOCAL_SSL_PATH="$HOME/.certs/localhostAmphora"
-
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Hermes CLI autocompletion
-source "$HOME/code/Amphora/hermes/build/dev/completions/hermes-completion.bash"
 
 # Add ~/.local/bin to PATH
 if [ -d "${HOME}/.local/bin" ] && [[ ":${PATH}:" != *":${HOME}/.local/bin:"* ]]; then
@@ -245,3 +220,7 @@ if [ -d "${HOME}/.local/bin" ] && [[ ":${PATH}:" != *":${HOME}/.local/bin:"* ]];
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# Vite can cause too many files open errors
+ulimit -n 4096

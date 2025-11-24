@@ -32,12 +32,18 @@ alias djm="python manage.py migrate"
 
 alias nginx="sudo lsof -ti:80 | sudo xargs kill -9 && sudo nginx"
 
+# ruby mine
+alias code='open -na "RubyMine.app"'
+
 # aws
 alias editaws="code ~/.aws/credentials"
 
 # misc
 alias brewski="brew update && brew upgrade && brew cleanup; brew doctor"
 
-# Amphora specific
-alias hermes="cd $HOME/code/Amphora/hermes && conda activate amphora311"
-alias frontend="cd $HOME/code/Amphora/frontend && conda activate base && nvm use"
+# pennylane
+alias brc="bin/rails c"
+alias brs="bin/rails s"
+alias bys="bin/yarn start"
+alias brsa="bin/rspec-auto"
+alias bp="bin/pull"

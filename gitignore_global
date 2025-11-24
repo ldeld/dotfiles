@@ -1,11 +1,18 @@
+# Macos files
 .DS_Store
 .DS_Store?
 ._*
 
+# db files
 *.sqlite
 
+# secret env files
 .env
 
 node_modules/
 
 .rake_tasks
+
+# RubyMine files
+.idea/
+.idea/*
