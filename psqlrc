@@ -1,0 +1,35 @@
+-- Suppress command output temporarily
+\set QUIET 1
+
+-- Set border style for query output tables
+\pset border 2
+
+-- Use Unicode characters for table lines
+\pset linestyle unicode
+
+-- Display '∅' for NULL values
+\pset null '∅'
+
+-- Automatically switch between expanded and normal display
+\x auto
+
+-- Set TCP keepalive idle time to 1 second
+SET tcp_keepalives_idle = 1;
+
+-- Ignore duplicate commands in history
+\set HISTCONTROL ignoredups
+
+-- Use uppercase for SQL keywords in autocompletion
+\set COMP_KEYWORD_CASE upper
+
+-- Enable timing of SQL commands
+\timing on
+
+-- Re-enable command output
+\unset QUIET
+
+-- Set the primary prompt
+\set PROMPT1 '%M:%> %n@%/%R%#'
+
+-- Set the secondary prompt
+\set PROMPT2 '%M %n@%/%R %# '
