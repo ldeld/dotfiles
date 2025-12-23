@@ -220,7 +220,12 @@ if [ -d "${HOME}/.local/bin" ] && [[ ":${PATH}:" != *":${HOME}/.local/bin:"* ]];
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
+source <(fzf --zsh)
 
 # Vite can cause too many files open errors
 ulimit -n 4096
+
+
+# Add rubymine
+
+export PATH="/Applications/RubyMine.app/Contents/MacOS:$PATH"
