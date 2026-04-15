@@ -47,3 +47,5 @@ alias brs="bin/rails s"
 alias bys="bin/yarn start"
 alias brsa="bin/rspec-auto"
 alias bp="bin/pull"
+
+alias cc="bin/awslogin && claude"

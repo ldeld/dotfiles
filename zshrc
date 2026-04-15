@@ -144,8 +144,8 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-export BUNDLER_EDITOR=code
-export EDITOR=code
+export BUNDLER_EDITOR=rubymine
+export EDITOR=rubymine
 
 _ARCH=$(arch)
 if [[ "$_ARCH" == "i386" ]]; then
